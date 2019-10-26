@@ -1,0 +1,119 @@
+<project name="TestNG Learning" default="usage" basedir=".">
+
+  <!-- Initialize Properties -->
+  
+  <property environment="env"/>
+  
+  <property name="ws.home" value="${basedir}"/>
+  <property name="ws.jars" value="${basedir}/lib"/>
+	
+  <property name="test.dest" value="${ws.home}/build"/>
+  <property name="test.src" value="${ws.home}/src"/>
+  <property name="ng.result" value="test-output"/>
+  
+	<target name="setClassPath" unless="test.classpath">
+		<path id="classpath_jars">
+			<fileset dir="${ws.jars}" includes="*.jar"/>
+		</path>
+		<pathconvert pathsep=":"
+			property="test.classpath"
+			refid="classpath_jars"/>
+	</target>
+	
+  <target name="init" depends="setClassPath">
+    <tstamp>
+		<format property="start.time" pattern="MM/dd/yyyy hh:mm	aa" />
+	</tstamp>
+  	
+  	
+	<condition property="ANT"
+		value="${env.ANT_HOME}/bin/ant.bat"
+		else="${env.ANT_HOME}/bin/ant">
+			<os family="windows" />
+	</condition>
+	<taskdef name="testng" classpath="${test.classpath}"
+		classname="org.testng.TestNGAntTask" />
+  </target>
+
+  <!-- all -->
+  <target name="all">
+  </target>
+  
+  <!-- compile -->
+	<target name="clean">
+		<delete dir="${test.dest}"/>
+	</target>
+
+  <!-- compile -->
+  <target name="compile" depends="init, clean" >
+		<delete includeemptydirs="true" quiet="true">
+			<fileset dir="${test.dest}" includes="**/*"/>
+		</delete>
+		<echo message=" making directory..."/>
+		<mkdir dir="${test.dest}"/>
+		<echo message="classpath--------: ${test.classpath}"/>
+		<echo message="compiling..."/>
+        
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac 
+		debug="true"
+		destdir="${test.dest}"
+		srcdir="${test.src}"
+		target="1.7"
+		classpath="${test.classpath}"
+		>
+		</javac>
+  </target>
+
+<!--build -->
+<target name="build" depends="init">
+</target>
+
+<!-- run -->
+<target name="run" depends="compile">
+	<testng classpath="${test.classpath}:${test.dest}" suitename="Suite1">
+		<xmlfileset dir="${ws.home}" includes="TestNG.xml" />
+	</testng>
+</target>
+
+<target name="usage">
+	<echo>
+	 ant run will execute the test
+	 </echo>
+</target>
+
+<path id="test.c">
+	<fileset dir="${ws.jars}" includes="*.jar"/>
+</path>
+
+	<tstamp> 
+	<format property="currentExecution" pattern="MMddyyyy_hh_mm_aa" locale="en,US"/> 
+	</tstamp> 
+	
+
+	
+	<property file="build.properties"/>
+	
+	<target name="makexsltreports">
+		
+		<tstamp> 
+			<format property="${thisRun}" pattern="ddMMMyyyy_hh_mm_ss_aa" locale="en,US"/> 
+		</tstamp>
+		<echo> ${thisRun}
+		</echo>
+<!--		<mkdir dir="${ws.home}/ss/${env.thisRun}"/> -->
+		
+		<xslt in="${ng.result}/testng-results.xml" style="${test.src}/xslt/testng-results.xsl" out="${ws.home}/Result/${thisRun}/XSLT_Reports/output/index.html" classpathref="test.c" >
+			<param name="testNgXslt.outputDir" expression="${ws.home}/Result/${thisRun}/XSLT_Reports/output"/>
+		    <param expression="FAIL,SKIP,PASS,CONF,BY_CLASS" name="testNgXslt.testDetailsFilter" />
+					
+			<param name="testNgXslt.showRuntimeTotals" expression="true"/>
+		</xslt>
+	</target>
+</project>
+
+
+
+
+
+

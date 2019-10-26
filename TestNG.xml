@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<suite name="Suite1" verbose="1" parallel="tests" thread-count="4">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+	</listeners>
+	
+<test name="SetUp">
+    <classes>
+      <class name="driver.M1"/>
+	</classes>
+</test>
+      
+<test name="SignIn_Credit_Delivery">
+    <classes>
+      <class name="script.TC_1"/>
+	</classes>
+</test>         
+
+<test name="SignIn_Credit_Promo_Delivery">
+    <classes>
+      <class name="script.TC_2"/>
+	</classes>
+</test>  
+      
+<test name="SignIn_GC_Delivery">
+    <classes>
+      <class name="script.TC_3"/>
+	</classes>
+</test> 
+      
+<test name="SignIn_GC_Promo_Delivery">
+    <classes>
+      <class name="script.TC_4"/>
+	</classes>
+</test>         
+
+<test name="SignIn_CANADA_Cash_Delivery">
+    <classes>
+      <class name="script.TC_5"/>
+	</classes>
+</test>  
+        
+<test name="SignIn_Cash_Promo_Delivery">
+    <classes>
+      <class name="script.TC_6"/>
+	</classes>
+</test> 
+
+<test name="Manage_Account">
+    <classes>
+      <class name="script.TC_13"/>
+	</classes>
+</test>
+
+<test name="SignIn_Credit_CarryOut">
+    <classes>
+      <class name="script.TC_7"/>
+	</classes>
+</test> 
+
+<test name="SignIn_Credit_Promo_CarryOut">
+    <classes>
+      <class name="script.TC_8"/>
+	</classes>
+</test> 
+
+<test name="SignIn_GC_CarryOut">
+    <classes>
+      <class name="script.TC_9"/>
+	</classes>
+</test> 
+
+<test name="SignIn_GC_Promo_CarryOut">
+    <classes>
+      <class name="script.TC_10"/>
+	</classes>
+</test> 
+
+<test name="SignIn_Cash_CarryOut">
+    <classes>
+      <class name="script.TC_11"/>
+	</classes>
+</test> 
+
+<test name="SignIn_Cash_Promo_CarryOut">
+    <classes>
+      <class name="script.TC_12"/>
+	</classes>
+</test> 
+
+ <test name="Edit_Save_Fave">
+    <classes>
+      <class name="script.TC_14"/>
+	</classes>
+</test> 
+
+ <test name="Guest_Credit_Delivery">
+    <classes>
+      <class name="script.TC_15"/>
+	</classes>
+</test> 
+
+ <test name="Guest_Credit_Promo_Delivery">
+    <classes>
+      <class name="script.TC_16"/>
+	</classes>
+</test> 
+
+ <test name="Guest_GC_Delivery">
+    <classes>
+      <class name="script.TC_17"/>
+	</classes>
+</test> 
+
+ <test name="Guest_GC_Promo_Delivery">
+    <classes>
+      <class name="script.TC_18"/>
+	</classes>
+</test> 
+ <test name="Guest_Cash_Delivery">
+    <classes>
+      <class name="script.TC_19"/>
+	</classes>
+</test> 
+
+ <test name="Guest_Cash_Promo_Delivery">
+    <classes>
+      <class name="script.TC_20"/>
+	</classes>
+</test> 
+ <test name="Guest_Credit_CarryOut">
+    <classes>
+      <class name="script.TC_21"/>
+	</classes>
+</test> 
+
+ <test name="Guest_Credit_Promo_CarryOut">
+    <classes>
+      <class name="script.TC_22"/>
+	</classes>
+</test> 
+
+ <test name="Guest_GC_CarryOut">
+    <classes>
+      <class name="script.TC_23"/>
+	</classes>
+</test> 
+ <test name="Guest_GC_Promo_CarryOut">
+    <classes>
+      <class name="script.TC_24"/>
+	</classes>
+</test> 
+
+ <test name="Guest_Cash_CarryOut">
+    <classes>
+      <class name="script.TC_25"/>
+	</classes>
+</test> 
+
+ <test name="Guest_Cash_Promo_CarryOut">
+    <classes>
+      <class name="script.TC_26"/>
+	</classes>
+</test> 
+
+  <test name="2Browsers">
+    <classes>
+      <class name="script.TC_27"/>
+	</classes>
+</test> 
+
+  <test name="Change Password">
+    <classes>
+      <class name="script.TC_28"/>
+	</classes>
+</test>
+
+<test name="Gift card-9">
+    <classes>
+      <class name="script.TC_29"/>
+	</classes>
+</test>
+
+<test name="Gift card-credit card">
+    <classes>
+      <class name="script.TC_30"/>
+	</classes>
+</test>
+
+<test name="Gift card-Cash">
+    <classes>
+      <class name="script.TC_31"/>
+	</classes>
+</test>
+
+<test name="Gift card-Check">
+    <classes>
+      <class name="script.TC_32"/>
+	</classes>
+</test>
+
+ <test name="RMW_SignIn_Credit_Delivery">
+    <classes>
+      <class name="script_RMW.RMW_TC1"/>
+	</classes>
+</test> 
+ <test name="RMW_SignIn_Credit_Promo_Delivery">
+    <classes>
+      <class name="script_RMW.RMW_TC2"/>
+	</classes>
+</test> 
+
+<test name="RMW_SignIn_GC_Delivery">
+    <classes>
+      <class name="script_RMW.RMW_TC3"/>
+	</classes>
+</test> 
+ <test name="RMW_SignIn_GC_Promo_Delivery">
+    <classes>
+     <class name="script_RMW.RMW_TC4"/>
+	</classes>
+</test>
+
+<test name="RMW_SignIn_CANADA_Cash_Delivery">
+    <classes>
+      <class name="script_RMW.RMW_TC5"/>
+	</classes>
+</test>  
+<test name="RMW_SignIn_Cash_Promo_Delivery">
+    <classes>
+      <class name="script_RMW.RMW_TC6"/>
+	</classes>
+</test> 
+
+<test name="RMW_Manage_Account">
+    <classes>
+      <class name="script_RMW.RMW_TC13"/>
+	</classes>
+</test>
+
+ <test name="RMW_SignIn_Credit_CarryOut">
+    <classes>
+      <class name="script_RMW.RMW_TC7"/>
+	</classes>
+</test> 
+
+ <test name="RMW_SignIn_Credit_Promo_CarryOut">
+    <classes>
+      <class name="script_RMW.RMW_TC8"/>
+	</classes>
+</test>
+<test name="RMW_SignIn_GC_CarryOut">
+    <classes>
+      <class name="script_RMW.RMW_TC9"/>
+	</classes>
+</test> 
+
+<test name="RMW_SignIn_GC_Promo_CarryOut">
+    <classes>
+      <class name="script_RMW.RMW_TC10"/>
+	</classes>
+</test>
+
+<test name="RMW_SignIn_Cash_CarryOut">
+    <classes>
+      <class name="script_RMW.RMW_TC11"/>
+	</classes>
+</test> 
+
+<test name="RMW_SignIn_Cash_Promo_CarryOut">
+    <classes>
+      <class name="script_RMW.RMW_TC12"/>
+	</classes>
+</test> 
+
+ <test name="RMW_Edit_Save_Fave">
+    <classes>
+      <class name="script_RMW.RMW_TC14"/>
+	</classes>
+</test> 
+
+ <test name="RMW_Guest_Credit_Delivery">
+    <classes>
+      <class name="script_RMW.RMW_TC15"/>
+	</classes>
+</test> 
+
+<test name="RMW_Guest_Credit_Promo_Delivery">
+    <classes>
+      <class name="script_RMW.RMW_TC16"/>
+	</classes>
+</test> 
+
+ <test name="RMW_Guest_GC_Delivery">
+    <classes>
+      <class name="script_RMW.RMW_TC17"/>
+	</classes>
+</test> 
+
+ <test name="RMW_Guest_GC_Promo_Delivery">
+    <classes>
+      <class name="script_RMW.RMW_TC18"/>
+	</classes>
+</test> 
+ <test name="RMW_Guest_Cash_Delivery">
+    <classes>
+      <class name="script_RMW.RMW_TC19"/>
+	</classes>
+</test> 
+
+ <test name="RMW_Guest_Cash_Promo_Delivery">
+    <classes>
+      <class name="script_RMW.RMW_TC20"/>
+	</classes>
+</test> 
+ <test name="RMW_Guest_Credit_CarryOut">
+    <classes>
+      <class name="script_RMW.RMW_TC21"/>
+	</classes>
+</test> 
+
+ <test name="RMW_Guest_Credit_Promo_CarryOut">
+    <classes>
+      <class name="script_RMW.RMW_TC22"/>
+	</classes>
+</test> 
+
+ <test name="RMW_Guest_GC_CarryOut">
+    <classes>
+      <class name="script_RMW.RMW_TC23"/>
+	</classes>
+</test> 
+ <test name="RMW_Guest_GC_Promo_CarryOut">
+    <classes>
+      <class name="script_RMW.RMW_TC24"/>
+	</classes>
+</test> 
+
+ <test name="RMW_Guest_Cash_CarryOut">
+    <classes>
+      <class name="script_RMW.RMW_TC25"/>
+	</classes>
+</test> 
+
+ <test name="RMW_Guest_Cash_Promo_CarryOut">
+    <classes>
+      <class name="script_RMW.RMW_TC26"/>
+	</classes>
+</test> 
+
+  <test name="RMW_2_browsers_SignIn_Back">
+    <classes>
+      <class name="script_RMW.RMW_TC27"/>
+	</classes>
+</test> 
+
+<test name="Anrd_Manage_Account">
+    <classes>
+      <class name="a_Script.A_TC1"/>
+	</classes>
+</test> 
+
+<test name="Anrd_Manage_Account2">
+    <classes>
+      <class name="a_Script.A_TC2"/>
+	</classes>
+</test> 
+
+<test name="WrapUp">
+    <classes>
+      <class name="driver.XsltReport"/>
+	</classes>
+</test>        
+
+</suite>
