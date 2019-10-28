@@ -14,3 +14,6 @@ Requirements:
 Framework - Selenium + Appium + TestNG
 Tracing API - Log4j
 Add on Report - TestNG-XSLT
+
+How to run:
+https://stackoverflow.com/questions/11896791/how-to-run-testng-from-command-line
